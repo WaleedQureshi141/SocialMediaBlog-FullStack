@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card p-5 mt-5">
+        <h1>Register</h1>
+
+        <form #accountForm="ngForm" (ngSubmit)="saveAccount(accountForm)">
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" name="username" [(ngModel)]="account.username">
+                <mat-icon matSuffix>person</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" name="password" [(ngModel)]="account.password">
+                <mat-icon matSuffix>key</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+
+            <mat-divider></mat-divider>
+
+            <div class="text-center mt-3">
+                <button mat-raised-button color="primary" class="m-2">Register</button>
+            </div>
+
+        </form>
+    </div>
+</div>
